@@ -3,7 +3,7 @@ import React from 'react';
 function Topbar(props) {
     return (
         <header className='topbar'>
-            <img className='logo' src="./logo.png" alt="LOGO" />
+            <img className='logo' src="./images/logo.png" alt="LOGO" />
         </header>
     );
 }
