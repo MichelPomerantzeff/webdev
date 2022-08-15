@@ -1,38 +1,303 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: "OpenSans-SemiBold";
+    src: url("../public/OpenSans.ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    font-family: "OpenSans-SemiBold"
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 7% 83% 10%;
+    grid-template-areas:
+        "topbar topbar"
+        "sidebar main"
+        "footer main";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    background-color: rgb(241, 241, 241);
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+/* TOPBAR STARTS HERE  */
+.topbar {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    grid-area: topbar;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+    width: 220px;
+}
+
+/* TOPBAR ENDS HERE  */
+
+
+
+
+
+
+/* SIDEBAR STARTS HERE  */
+
+
+.sidebar {
+    background-color: #273b55;
+    grid-area: sidebar;
+    display: flex;
+    height: 100%;
+}
+
+.link {
+    padding: 15px 30px; 
+}
+
+aside .ul {
+    
+    list-style-type: none;
+    width: 100%;
+    margin: 100px auto;
+}
+
+.link{
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    padding: 10px;
+}
+
+aside .ul .li {
+    font-size: 1.2rem;
+}
+
+aside .ul .li a {
+    text-decoration: none;
+    color: white;
+}
+
+aside .ul .li a:hover {
+    color: rgb(163, 163, 163);
+}
+
+footer {
+    background-color: #131d2b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    color: white;
+    grid-area: footer;
+    height: 10vh;
+}
+
+/* SIDEBAR ENDS HERE  */
+
+
+
+
+
+
+/* MAIN STARTS HERE  */
+
+.main{
+    padding: 40px;    
+    overflow: auto;  
+}
+
+.main h1, .main h2, .main p, .main img {
+    margin: 10px;
+}
+
+.sidebar-img{
+    height: 150px;
+}
+
+.campo-utilizador{
+    height: 200px;
+}
+/* MAIN ENDS HERE  */
+
+
+/* FORM STARTS HERE  */
+
+form{
+    overflow: auto;   
+    color: #1a283a;
+    grid-area: main;
+    padding: 50px;
+}
+
+form h1 {
+    margin-bottom: 50px;
+}
+
+form h2 {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(233, 231, 231);
+    padding: 18px 20px;
+    font-size: 1.3rem;
+}
+
+.symbol{
+    cursor: pointer;
+}
+
+.checkboxes {
+    padding: 30px;
+    background-color: white;
+
+}
+
+.checkboxes div {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.checkboxes div input {
+    margin-right: 20px;
+}
+
+form div input[type='checkbox'] {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    background-color: white;
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin: 10px 30px;
+}
+
+.contact label {
+    font-weight: bold;
+    color: #1a283aa2;
+    font-size: 1.3rem;
+}
+
+.contact div input {
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 1.3rem;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px 100px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    margin: 50px 30px;
+}
+
+.cancel {
+    background-color: white;
+    border: solid 1px lightgray;
+    color: #1a283a;
+}
+
+.cancel:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.save {
+    background-color: rgb(0, 153, 255);
+    color: white;
+}
+
+.save:hover {
+    background-color: rgb(5, 134, 219);
+}
+/* FORM ENDS HERE  */
+
+
+
+
+
+
+/* USERS STARTS HERE  */
+.users{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* border: solid 1px lightgray; */
+    padding: 50px 0px;
+
+}
+
+.user-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    background-color: white;
+    width: 300px;
+    height: 250px;
+    padding: 5px 10px;
+    margin: 20px;
+    position: relative;
+}
+
+.user-card:hover {
+    transform: translateY(-3px);
+    transition: .3s ease;
+}
+
+.user-card:hover .del {
+    display: inline;
+}
+
+.user-field{
+    padding: 10px;
+}
+
+.del{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: none;
+}
+
+
+/* USERS ENDS HERE  */
+
+
+
+
+
+.off {
+    display: none;
 }
