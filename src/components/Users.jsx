@@ -10,9 +10,6 @@ function Users(props) {
     const [data, setData] = useState([])
 
 
-
-
-
     // Get data from Local Storage
     useEffect(() => {
         setData(JSON.parse(localStorage.getItem("data")))

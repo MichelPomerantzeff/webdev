@@ -3,7 +3,6 @@ import AddUser from "./components/AddUser";
 import Users from "./components/Users";
 import Topbar from "./components/Topbar";
 import Sidebar from "./components/Sidebar";
-import ErrorPage from "./components/ErrorPage";
 import "./App.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
@@ -17,7 +16,7 @@ function App() {
         <Sidebar />
 
         <Routes>
-          <Route path="*" element={<Home />} />
+          <Route path="/webdev" element={<Home />} />
         </Routes>
 
         <Routes>
@@ -27,10 +26,6 @@ function App() {
         <Routes>
           <Route path="/users" element={<Users />} />
         </Routes>
-
-        {/* <Routes>
-          <Route path="*" element={<ErrorPage />} />
-        </Routes> */}
 
       </Router>
     </div>
