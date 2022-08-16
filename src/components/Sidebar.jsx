@@ -20,7 +20,7 @@ function Sidebar(props) {
                
                 <div className='ul'>
                     <div className='li'>
-                        <Link to="/webdev">
+                        <Link to="/webdev/">
                             <div className='link home-link'>
                                 <span className='icon'>{home}</span> INICIO
                             </div>
@@ -28,7 +28,7 @@ function Sidebar(props) {
                     </div>
 
                     <div className='li'>
-                        <Link to="/add-user">
+                        <Link to="/webdev/add-user">
                             <div className='link'>
                                 <span className='icon'>{register}</span> UTILIZADOR
                             </div>
@@ -36,7 +36,7 @@ function Sidebar(props) {
                     </div>
 
                     <div className='li'>
-                        <Link to="/users">
+                        <Link to="/webdev/users">
                         <div className='link'>
                             <span className='icon'>{eye}</span> DADOS
                         </div>

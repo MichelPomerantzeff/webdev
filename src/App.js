@@ -20,11 +20,11 @@ function App() {
         </Routes>
 
         <Routes>
-          <Route path="/add-user" element={<AddUser />} />
+          <Route path="/webdev/add-user" element={<AddUser />} />
         </Routes>
 
         <Routes>
-          <Route path="/users" element={<Users />} />
+          <Route path="/webdev/users" element={<Users />} />
         </Routes>
 
       </Router>
