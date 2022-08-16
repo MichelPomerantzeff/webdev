@@ -20,7 +20,7 @@ function Sidebar(props) {
                
                 <div className='ul'>
                     <div className='li'>
-                        <Link to="/webdev">
+                        <Link to="/">
                             <div className='link home-link'>
                                 <span className='icon'>{home}</span> INICIO
                             </div>
